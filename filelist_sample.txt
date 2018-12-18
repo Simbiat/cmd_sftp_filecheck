@@ -1,0 +1,13 @@
+block Abinitio
+.a21 Mandatory
+block ALS
+.ala Mandatory
+r.RALI	Reconciliation
+r.ralo	Reconciliation
+block CentralBank
+_000_.*\.epd Mandatory
+_30101810300000000202_000_.*\.vip Mandatory
+_DBF_BNKSEEK.BIK Mandatory
+block BOSTE
+r.CLREC	Reconciliation
+r.MMREC	Reconciliation
