@@ -84,8 +84,18 @@ exit
 
 
 :filecheck
-FINDSTR /I %dt%%1 %lsfile% > nul
+if "%1" EQU ".epd" (
+	set filename=%1
+) else (
+	if "%1" EQU ".vip" (
+		set filename=%1
+	) else (
+		set filename=%dt%%1
+	)
+)
+FINDSTR /I /R %filename% %lsfile% > nul
 If %errorlevel% neq 0 (
-  Echo %2 file %dt%%1 is missing
+	color c0
+	Echo %2 file %filename% is missing
 )
 exit /b
